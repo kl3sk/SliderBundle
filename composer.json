@@ -11,11 +11,15 @@
             "email": "klesk44@gmail.com"
         }
     ],
+    "require-dev": {
+        "symfony/framework-bundle": ">=2.2"
+    },
     "require": {
         "php": ">=5.3.0",
         "gregwar/image-bundle": "dev-master",
         "symfony/symfony": ">=2.2"
     },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-0": {
             "Klesk\\SliderBundle": ""
