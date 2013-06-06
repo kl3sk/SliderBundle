@@ -21,6 +21,12 @@ Create slider using coin-slider and Gregwar-ImageBundle
 
 > if `resize`if different than `none`. It use GregwarImageBundle
 
+### config nodes
+- effect
+    - random
+    - rain
+    - swirl
+    - straight
 
 ###### List
 - [ ] Create readme
