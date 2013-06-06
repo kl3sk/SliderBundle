@@ -1,0 +1,25 @@
+{
+    "name": "klesk/news-bundle",
+    "type": "symfony-bundle",
+    "description": "News bundle",
+    "keywords": ["symfony2", "image"],
+    "homepage": "https://github.com/kl3sk/SliderBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Grégoire HOUSSAIS",
+            "email": "klesk44@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "gregwar/image-bundle": "dev-master",
+        "symfony/symfony": ">=2.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "Klesk\\SliderBundle": ""
+        }
+    },
+    "target-dir": "Klesk/SliderBundle"
+}
