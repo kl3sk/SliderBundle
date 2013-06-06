@@ -1,5 +1,5 @@
 {
-    "name": "klesk/slider-bundle",
+    "name": "kl3sk/slider-bundle",
     "type": "symfony-bundle",
     "description": "Slider bundle",
     "keywords": ["symfony2", "image", "slider"],
