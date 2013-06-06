@@ -1,0 +1,9 @@
+parameters:
+   klesk.slider.class: Klesk\SliderBundle\Twig\Extension\KleskSliderExtension
+
+services:
+    klesk.twig.klesk_slider:
+        class: %klesk.slider.class%
+        arguments: [@service_container]
+        tags:
+            - { name: twig.extension, alias: klesk_slider }

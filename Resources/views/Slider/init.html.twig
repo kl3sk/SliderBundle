@@ -1,0 +1,20 @@
+<div id='coin-slider'>
+	{% for entity in entities %}
+		<a href="img01_url" target="_blank">
+			{% if config.resize == 'resize' %}
+				<img src='{{ image(config.imagepath ~ entity.image.path).resize(config.width,config.height) }}' >
+			{% elseif config.resize == 'force' %}
+				<img src='{{ image(config.imagepath ~ entity.image.path).forceResize(config.width,config.height) }}' >
+			{% elseif config.resize == 'crop' %}
+				<img src='{{ image(config.imagepath ~ entity.image.path).cropResize(config.width,config.height) }}' >
+			{% elseif config.resize == 'scale' %}
+				<img src='{{ image(config.imagepath ~ entity.image.path).scaleResize(config.width,config.height) }}' >
+			{% else %}
+				<img src='{{ asset(config.imagepath ~ entity.image.path) }}' >
+			{% endif %}
+			<span>
+				{{ entity.header }}
+			</span>
+		</a>
+	{% endfor %}
+</div>

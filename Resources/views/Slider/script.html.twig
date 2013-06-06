@@ -1,0 +1,27 @@
+{% if config.prev|first == '.' %}
+	{% set prev = '<i class="' ~ config.prev|replace({".":""}) ~ '"></i>' %}
+{% else %}
+	{% set prev = config.prev %}
+{% endif %}
+
+{% if config.next|first == '.' %}
+	{% set next = '<i class="' ~ config.next|replace({".":""}) ~ '"></i>' %}
+{% else %}
+	{% set next = config.next %}
+{% endif %}
+
+<script type="text/javascript">
+	$(document).ready(function (){
+		$('#coin-slider').coinslider({
+			effect: '{{ config.effect }}',
+			prevText: '{{ prev|raw }}',
+			nextText: '{{ next|raw }}',
+			width: {{ config.width }},
+			height: {{ config.height }},
+			spw: {{ config.square_per_width }},
+			sph: {{ config.square_per_height }},
+			delay: {{ config.delay }}
+		});
+	});
+</script>
+
