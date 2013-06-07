@@ -1,9 +1,22 @@
+Work in progress
+=================
+
+
 SliderBundle
 ============
 
-Create slider using coin-slider and Gregwar-ImageBundle
+### Create slider using coin-slider
 
-### HowTo : Comming soon
+![Alt Text](http://workshop.rs/wp-content/uploads/2010/04/coin-slider.png)
+
+[Coin Slider](http://workshop.rs/2010/04/coin-slider-image-slider-with-unique-effects/)
+
+
+### Gregwar-ImageBundle
+
+[Gregwar ImageBundle](https://github.com/Gregwar/ImageBundle)
+
+#### HowTo : Comming soon
 
 
 ## config
@@ -21,7 +34,7 @@ Create slider using coin-slider and Gregwar-ImageBundle
 
 > if `resize`if different than `none`. It use GregwarImageBundle
 
-### config nodes
+#### config nodes
 - effect
     - random
     - rain
