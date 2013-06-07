@@ -15,7 +15,7 @@ class KleskSliderExtension extends \Twig_Extension
     protected $container;
 
     /**
-	* Initialize tinymce helper
+	* Initialize slider helper
 	*
 	* @param ContainerInterface $container
 	*/

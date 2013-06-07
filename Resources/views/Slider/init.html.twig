@@ -1,16 +1,17 @@
 <div id='coin-slider'>
 	{% for entity in entities %}
+		{% set imageEntity = config.self_entity %}
 		<a href="img01_url" target="_blank">
 			{% if config.resize == 'resize' %}
-				<img src='{{ image(config.imagepath ~ entity.image.path).resize(config.width,config.height) }}' >
+				<img src='{{ image(config.imagepath ~ imageEntity).resize(config.width,config.height) }}' >
 			{% elseif config.resize == 'force' %}
-				<img src='{{ image(config.imagepath ~ entity.image.path).forceResize(config.width,config.height) }}' >
+				<img src='{{ image(config.imagepath ~ imageEntity).forceResize(config.width,config.height) }}' >
 			{% elseif config.resize == 'crop' %}
-				<img src='{{ image(config.imagepath ~ entity.image.path).cropResize(config.width,config.height) }}' >
+				<img src='{{ image(config.imagepath ~ imageEntity).cropResize(config.width,config.height) }}' >
 			{% elseif config.resize == 'scale' %}
-				<img src='{{ image(config.imagepath ~ entity.image.path).scaleResize(config.width,config.height) }}' >
+				<img src='{{ image(config.imagepath ~ imageEntity).scaleResize(config.width,config.height) }}' >
 			{% else %}
-				<img src='{{ asset(config.imagepath ~ entity.image.path) }}' >
+				<img src='{{ asset(config.imagepath ~ imageEntity) }}' >
 			{% endif %}
 			<span>{{ entity.header }}</span>
 		</a>
