@@ -51,6 +51,24 @@ SliderBundle
     - swirl
     - straight
 
+#### next/prev links
+If next and/or prev node begin by a dot (.), script assume it's a CSS class. So it's possible tu use class instead of normal text.
+Exemple : 
+
+    klesk_slider:
+      next: .icon-arrow-right .icon-white
+      prev: .icon-arrow-left .icon-white
+
+this will use the twitter bootstrap icon insead of text.
+
+#### possible resise
+- resise
+  - force
+  - resize
+  - crop
+  - scale
+  - none
+
 ###### List
 - [ ] Create readme
 - [ ] Complete test
