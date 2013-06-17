@@ -44,14 +44,14 @@ SliderBundle
 
 > if `resize`if different than `none`. It use GregwarImageBundle
 
-#### possible effects
+#### Possible effects
 - effect
     - random
     - rain
     - swirl
     - straight
 
-#### next/prev links
+#### Next/prev links
 If next and/or prev node begin by a dot (.), script assume it's a CSS class. So it's possible tu use class instead of normal text.
 Exemple : 
 
@@ -61,7 +61,7 @@ Exemple :
 
 this will use the twitter bootstrap icon insead of text.
 
-#### possible resise
+#### Possible resize
 - resise
   - force
   - resize
