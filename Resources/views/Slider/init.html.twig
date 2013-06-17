@@ -1,7 +1,7 @@
 <div id='coin-slider'>
 	{% for entity in entities %}
 		{% set imageEntity = attribute(entity.image,config.self_entity) %}
-		<a href="img01_url" target="_blank">
+		{# <a href="#" target="_blank"> #}
 			{% if config.resize == 'resize' %}
 				<img src='{{ image(config.imagepath ~ imageEntity).resize(config.width,config.height) }}' >
 			{% elseif config.resize == 'force' %}
@@ -17,6 +17,6 @@
 				<b>{{ entity.title }}</b>
 				<div>{{ entity.header }}</div>
 			</span>
-		</a>
+		{# </a> #}
 	{% endfor %}
 </div>
