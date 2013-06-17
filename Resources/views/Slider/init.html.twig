@@ -13,7 +13,10 @@
 			{% else %}
 				<img src='{{ asset(config.imagepath ~ imageEntity) }}' >
 			{% endif %}
-			<span>{{ entity.header }}</span>
+			<span>
+				<b>{{ entity.title }}</b>
+				<div>{{ entity.header }}</div>
+			</span>
 		</a>
 	{% endfor %}
 </div>
