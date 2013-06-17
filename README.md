@@ -31,10 +31,20 @@ SliderBundle
       prev: prev
       resize: none
       imagepath: "images/news/"
+      self_entity: path
+      entity find
+      criterias:
+         field: author
+         value: klesk
+      order:
+          by: date
+          sort: desc
+      limit: 5
+      offset: 0 
 
 > if `resize`if different than `none`. It use GregwarImageBundle
 
-#### config nodes
+#### possible effects
 - effect
     - random
     - rain
