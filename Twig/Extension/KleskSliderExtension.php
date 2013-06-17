@@ -14,6 +14,9 @@ class KleskSliderExtension extends \Twig_Extension
 	*/
     protected $container;
 
+    protected $limit;
+    protected $offset;
+
     /**
 	* Initialize slider helper
 	*
@@ -69,10 +72,20 @@ class KleskSliderExtension extends \Twig_Extension
 
 	public function Slider($entity)
 	{
-		$em = $this->getService('doctrine.orm.entity_manager');
-		$entities = $em->getRepository($entity)->findAll();
 		// Get configuration
-        $config  = $this->getParameter('klesk_slider.config');
+		$config    = $this->getParameter('klesk_slider.config');
+		$limit     = $config['limit'];
+		$offset    = $config['offset'];
+		
+		$em        = $this->getService('doctrine.orm.entity_manager');
+		
+		$criterias = !empty($config['criterias']) 	? array($config['criterias']['field']=>$config['criterias']['value']) 	: array();
+		$orders    = !empty($config['order']) 		? array($config['order']['by']=>$config['order']['sort']) 				: array();
+
+		$entities = $em->getRepository($entity)->findBy($criterias,
+		                                                $orders,
+		                                                $limit,
+		                                                $offset);
 
 		return $this->getService('templating')->render('KleskSliderBundle:Slider:init.html.twig',array('entities' => $entities, 'config' => $config));
 	}
