@@ -65,8 +65,8 @@ class Configuration implements ConfigurationInterface
 						->treatNullLike(array())
 						->addDefaultsIfNotSet()
 						->children()
-							->scalarNode("by")->end()
-							->scalarNode("sort")->end()
+							->scalarNode("by")->defaultValue('id')->end()
+							->scalarNode("sort")->defaultValue('desc')->end()
 						->end()
 					->end()
 
