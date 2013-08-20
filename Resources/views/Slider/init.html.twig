@@ -1,7 +1,8 @@
 <div id='coin-slider'>
 	{% if not entities %}
-			<img src='{{ image("bundles/kleskslider/img/no-image-featured-image.png").resize(config.width,config.height) }}' >
-			<span>{{ 'kleskslider.notfound'|trans({},'KleskSlider') }}</span>
+			{% set notFoundText = 'kleskslider.notfound'|trans({},'KleskSlider') %}
+			<img src='{{ new_image(config.width,config.height).fill("0xffffff").write("bundles/kleskslider/fonts/alphabeta/alphbeta.ttf",notFoundText,(config.width)/2,(config.height)/2,18,0,'#CCCCCC','center') }}' >
+			<span>{{ notFoundText }}</span>
 	{% else %}
 		{% for entity in entities %}
 			{% set imageEntity = attribute(entity.image,config.self_entity) %}
